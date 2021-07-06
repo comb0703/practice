@@ -7,6 +7,8 @@
 ## Main idea
 ![1311](https://user-images.githubusercontent.com/87002037/124554446-eedb8780-de70-11eb-9c53-c2fcfa799904.png)
 
+## Tutorial
+
 
 
 ## Performance
@@ -15,5 +17,4 @@
 
 ## Reference
 
-* Deep Residual Learning for Image Recognition
-- Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun; Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016, pp. 770-778
+* Deep Residual Learning for Image Recognition (Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun; Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016, pp. 770-778)
