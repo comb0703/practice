@@ -17,7 +17,7 @@ We trained total 3 ResNet having different depth layers and compared with paper 
 
 ||ResNet-20|ResNet-32|ResNet-44|
 |------|---|---|---|
-|Test err|8.52%| 7.42%|6.97%|
+|Test err|10.52%| 9.42%|9.48%|
 |Paper err|8.75%|7.51%|7.46%|
 
 ## Reference
