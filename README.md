@@ -11,6 +11,7 @@
 I implemented 4.2. CIFAR-10 part on paper("Deep Residual Learning for Image Recognition"). We trained total 3 different depth layers ResNet and compared with paper err.
 
 ## Performance
+
 |Name|Layers|Paper err||Accuracy|
 |------|---|---|---|
 |ResNet20|20|8.75|8.52|
