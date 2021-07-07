@@ -7,8 +7,6 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "import numpy as np\n",
-    "import matplotlib.pyplot as plt\n",
     "import os\n",
     "import torch\n",
     "import torch.nn as nn\n",
@@ -16,7 +14,7 @@
     "import torchvision\n",
     "import torchvision.transforms as transforms\n",
     "import torch.optim as optim\n",
-    "from torch.utils.tensorboard import SummaryWriter\n"
+
    ]
   },
   {
