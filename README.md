@@ -13,16 +13,11 @@ We trained total 3 ResNet having different depth layers and compared with paper 
 
 ## Performance
 
-||Name|Layers|Paper err|Accuracy|
-||------|---|---|---|
-||ResNet20|20|8.75|8.52|
-||ResNet32|32|7.51|7.42|
-||ResNet44|44|7.17|6.97|
 
-||ResNet-20|ResNet-32|ResNet-32|
+||ResNet-20|ResNet-32|ResNet-44|
 |------|---|---|---|
-|Test|91.52% (err 8.48%)|92.54% (err 7.46%)|92.54% (err 7.46%)|
-|Paper|91.25% (err 8.75%)|92.49% (err 7.51%)|92.54% (err 7.46%)|
+|Test err|8.52%| 7.42%|6.97%|
+|Paper err|8.75%|7.51%|7.46%|
 
 ## Reference
 
