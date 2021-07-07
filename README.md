@@ -7,13 +7,15 @@
 ## Main idea
 ![1311](https://user-images.githubusercontent.com/87002037/124554446-eedb8780-de70-11eb-9c53-c2fcfa799904.png)
 
-## Tutorial
-
-
+## Details
+I implemented 4.2. CIFAR-10 part on paper("Deep Residual Learning for Image Recognition"). We trained total 3 different depth layers ResNet and compared with paper err.
 
 ## Performance
-![image](https://user-images.githubusercontent.com/55551567/118912468-cf40dc00-b962-11eb-83cd-363f6c198609.png)
-
+|Name|Layers|Paper err||Accuracy|
+|------|---|---|---|
+|ResNet20|20|8.75|8.52|
+|ResNet32|32|7.51|7.42|
+|ResNet44|44|7.17|6.97|
 
 ## Reference
 
