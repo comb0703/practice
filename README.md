@@ -8,7 +8,7 @@
 ![1311](https://user-images.githubusercontent.com/87002037/124681898-83db9080-df04-11eb-8a02-b77391df3ade.png)
 
 ## Details
-I implemented 4.2. CIFAR-10 part on paper("Deep Residual Learning for Image Recognition")
+I implemented part 4.2. CIFAR-10 on paper("Deep Residual Learning for Image Recognition")
 
 We trained total 3 ResNet having different depth layers and compared with paper err
 
