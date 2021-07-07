@@ -9,6 +9,7 @@
 
 ## Details
 I implemented 4.2. CIFAR-10 part on paper("Deep Residual Learning for Image Recognition")
+
 We trained total 3 ResNet having different depth layers and compared with paper err
 
 ## Performance
