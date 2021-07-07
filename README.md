@@ -5,7 +5,7 @@
 
 
 ## Main idea
-![1311](https://user-images.githubusercontent.com/87002037/124554446-eedb8780-de70-11eb-9c53-c2fcfa799904.png)
+![1311](https://user-images.githubusercontent.com/87002037/124681898-83db9080-df04-11eb-8a02-b77391df3ade.png)
 
 ## Details
 I implemented 4.2. CIFAR-10 part on paper("Deep Residual Learning for Image Recognition")
