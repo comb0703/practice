@@ -16,6 +16,12 @@ We trained total 3 ResNet having different depth layers and compared with paper 
 ## Performance
 
 * Increasing cardinality
+|ResNeXt29|1x64d|2x64d|4x64d|
+|------|---|---|---|
+|Test err|5.42%| 0.00%|0.00%|
+
+
+* Increasing cardinality
 ||1x64d|2x64d|4x64d|
 |------|---|---|---|
 |Test err|5.42%| -%|-%|
