@@ -1,4 +1,4 @@
-# ResNet
+# ResNeXt
 
 ![version](https://img.shields.io/badge/CUDA-11.1-brightgreen) ![version](https://img.shields.io/badge/cuDNN-8.1.0-blue) ![version](https://img.shields.io/badge/pytorch-1.9.0-orange)
 
@@ -9,9 +9,11 @@
 
 
 ## Details
-I implemented part 4.2. CIFAR-10 on paper("Deep Residual Learning for Image Recognition")
+I implemented part 5.3. Experiments on CIFAR10 using ResNeXt29 model
 
-We trained total 3 ResNet having different depth layers and compared with paper err
+We trained two cases and compared with paper err
+1. increase cardinality and fix all widths
+2. increase width of the ebottleneck and fix cardinality = 1
 
 ## Performance
 * Increasing cardinality
@@ -31,4 +33,6 @@ Paper performance
 
 ## Reference
 
-* Aggregated Residual Transformations for Deep Neural Networks (Saining Xie; Ross Girshick; Piotr Dollár; Zhuowen Tu; Kaiming He) - 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
+* Aggregated Residual Transformations for Deep Neural Networks (Saining Xie; Ross Girshick; Piotr Dollár; Zhuowen Tu; Kaiming He)
+
+- 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
