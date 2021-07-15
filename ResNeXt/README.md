@@ -28,7 +28,8 @@ We trained two cases and compared with paper err
 |------|---|---|---|
 |Test err|-%| -%|-%|
 
-Paper performance
+* Paper performance
+
 ![1](https://user-images.githubusercontent.com/87002037/125739808-8af862ab-e6ad-49dc-9829-066e73d5d1b1.PNG)
 
 ## Reference
