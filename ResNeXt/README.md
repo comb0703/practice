@@ -22,7 +22,7 @@ We trained total 3 ResNet having different depth layers and compared with paper 
 
 * Increasing bottleneck_width
 
-||1x64d|1x128d|1x192d|
+|ResNeXt29|1x64d|1x128d|1x192d|
 |------|---|---|---|
 |Test err|-%| -%|-%|
 
