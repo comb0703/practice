@@ -20,18 +20,13 @@ We trained total 3 ResNet having different depth layers and compared with paper 
 |------|---|---|---|
 |Test err|5.42%| 0.00%|0.00%|
 
-
-* Increasing cardinality
-||1x64d|2x64d|4x64d|
-|------|---|---|---|
-|Test err|5.42%| -%|-%|
-
 * Increasing bottleneck_width
+
 ||1x64d|1x128d|1x192d|
 |------|---|---|---|
 |Test err|-%| -%|-%|
 
-Paper
+Paper performance
 ![1](https://user-images.githubusercontent.com/87002037/125739808-8af862ab-e6ad-49dc-9829-066e73d5d1b1.PNG)
 
 ## Reference
