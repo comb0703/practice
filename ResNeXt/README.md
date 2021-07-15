@@ -14,6 +14,7 @@ I implemented part 4.2. CIFAR-10 on paper("Deep Residual Learning for Image Reco
 We trained total 3 ResNet having different depth layers and compared with paper err
 
 ## Performance
+* Increasing cardinality
 
 |ResNeXt29|1x64d|2x64d|4x64d|
 |------|---|---|---|
