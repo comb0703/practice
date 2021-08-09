@@ -15,6 +15,14 @@
 
 * I didnt apply scale on arcface loss
 
+* It was quite confusing "where do i have to put ArcFace loss function in network architecture?"
+
+* Most important thing is loss is calculated with logit's output and ground-truth label
+
+* ArcFace is technicque for changing logit's input with margin
+
+* ArcFace loss just add margin to groud truth's weight. people called this as ArcFace loss, so i thought that might be standard for calculating for loss. but it wasnt. Still loss is calculated by Cross-Entropy loss function   
+
 ![2](https://user-images.githubusercontent.com/87002037/128664977-b0b250c1-d23f-4e1d-841f-ec85869c5250.PNG)
 
 
