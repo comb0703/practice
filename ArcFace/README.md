@@ -1,4 +1,4 @@
-# ResNeXt
+# ArcFace
 
 ![version](https://img.shields.io/badge/CUDA-11.1-brightgreen) ![version](https://img.shields.io/badge/cuDNN-8.1.0-blue) ![version](https://img.shields.io/badge/pytorch-1.9.0-orange)
 
@@ -31,4 +31,3 @@ I didnt apply scale on arcface loss
 
 * ArcFace: Additive Angular Margin Loss for Deep Face Recognition (Jiankang Deng, Jia Guo, Niannan Xue, Stefanos Zafeiriou)
 
-- 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)
