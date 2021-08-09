@@ -20,9 +20,11 @@
 
 ## Performance
 * Softmax
+
 ![1](https://user-images.githubusercontent.com/87002037/128678740-424c2325-221b-4895-a8ed-258ed42d9231.PNG)
 
 * ArcFace
+
 ![2](https://user-images.githubusercontent.com/87002037/128678762-48a60c7b-696d-440a-87fb-44664a327a56.PNG)
 
 * 3D Visualization
