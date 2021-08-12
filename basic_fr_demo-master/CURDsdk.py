@@ -18,10 +18,10 @@ class CURD_sdk:
         self.detector = None
 
         self.reid_thres = 35
-        self.model_path = 'models/Glint360k_r18.pth'
+        self.model_path = 'pth/d_net.pth'
         
         self.gal_root = 'gal/'
-        self.gal_file_name = 'Glint360k_r18'
+        self.gal_file_name = 'a.jpg'
         
         # draw cv2 color
         self.normal_box_color = CURD_color['normal_box']
@@ -30,7 +30,7 @@ class CURD_sdk:
         self.navy = CURD_color['navy']
 
         # config (fixed)
-        self.device = 'cuda'
+        self.device = torch.device("cuda:0" if (torch.cuda.is_available()) else "cpu")
         self.src = np.array([
             [30.2946, 51.6963],
             [65.5318, 51.5014],
@@ -66,14 +66,16 @@ class CURD_sdk:
     ### Extractor
     def set_extractor(self):
         self.extractor = self.get_extractor(self.model_path)
+        #self.extractor = model.load_state_dict(torch.load(PATH))
         self.extractor.to(self.device)
+        
         self.extractor.eval()
 
     def get_extractor(self, model_path):
         sys.path.append('./models/arcface_torch')
         from iresnet import iresnet18
         net = iresnet18(fp16=False)
-        net.load_state_dict(torch.load(model_path))
+        net.load_state_dict(torch.load(model_path),strict=False)
         sys.stdout.write('\t[Network] %s\n\n' % model_path)
         sys.stdout.flush()
         return net
