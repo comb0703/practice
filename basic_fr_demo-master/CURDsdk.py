@@ -21,7 +21,7 @@ class CURD_sdk:
         self.model_path = 'pth/d_net.pth'
         
         self.gal_root = 'gal/'
-        self.gal_file_name = 'a.jpg'
+        self.gal_file_name = 'Glint360k_r18'
         
         # draw cv2 color
         self.normal_box_color = CURD_color['normal_box']
@@ -30,7 +30,7 @@ class CURD_sdk:
         self.navy = CURD_color['navy']
 
         # config (fixed)
-        self.device = torch.device("cuda:0" if (torch.cuda.is_available()) else "cpu")
+        self.device = 'cuda'
         self.src = np.array([
             [30.2946, 51.6963],
             [65.5318, 51.5014],
@@ -66,9 +66,7 @@ class CURD_sdk:
     ### Extractor
     def set_extractor(self):
         self.extractor = self.get_extractor(self.model_path)
-        #self.extractor = model.load_state_dict(torch.load(PATH))
         self.extractor.to(self.device)
-        
         self.extractor.eval()
 
     def get_extractor(self, model_path):
@@ -160,8 +158,20 @@ class CURD_sdk:
     def match_face(self, prob_face_emb):
         
         score = self.calculate_score(prob_face_emb, self.gal_embs)
-        top1_idx = int(torch.argmax(score))
+        score = list(score)
+        answer = []
+        for i in range(len(score)) :
+            answer.append([score[i],i])
+
+        answer.sort(reverse=True)
+        #top1_idx = int(torch.argmax(score))
+        top1_idx = int(answer[0][1])
+        top2_idx = int(answer[1][1])
+        top3_idx = int(answer[2][1])
+
         top1_score = float(score[top1_idx])
+        top2_score = float(score[top2_idx])
+        top3_score = float(score[top3_idx])
 
         if top1_score > self.reid_thres :
             top1_name = self.gal_list.loc[top1_idx]['file'][:-4]
@@ -169,7 +179,20 @@ class CURD_sdk:
             top1_name = 'Unknown'
             top1_score = -1
 
-        return top1_score, top1_name
+        if top2_score > self.reid_thres :
+            top2_name = self.gal_list.loc[top2_idx]['file'][:-4]
+        else:
+            top2_name = 'Unknown'
+            top2_score = -1
+
+        if top3_score > self.reid_thres :
+            top3_name = self.gal_list.loc[top3_idx]['file'][:-4]
+        else:
+            top3_name = 'Unknown'
+            top3_score = -1
+
+
+        return top1_score, top1_name, top2_score, top2_name, top3_score, top3_name
 
     def get_bbox(self, frame, gal=False):
 
@@ -248,19 +271,24 @@ class CURD_sdk:
             for bbox, lm in zip(bbox_list, lm_list):
                 prob_face = self.get_face(rgb_frame.copy(), lm)
                 prob_face_emb = self.extract_emb(prob_face)
-                pred_score, pred_name = self.match_face(torch.from_numpy(prob_face_emb))
+                pred_score, pred_name, pred_score2, pred_name2, pred_score3, pred_name3  = self.match_face(torch.from_numpy(prob_face_emb))
                 
                 name_color = [110,110,110] # unknown color
 
                 # 유효 점수
                 if pred_score > 0:
-                    result_frame = cv2.putText(result_frame, str(pred_score)[:5], (bbox[0],bbox[3]+62), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=1, color=self.normal_box_color)
+                    result_frame = cv2.putText(result_frame, str(pred_score)[:5], (bbox[0],bbox[3]+40), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=2, color=name_color)
+                    name_color = [0,200,197]
+                if pred_score2 > 0:
+                    result_frame = cv2.putText(result_frame, str(pred_score2)[:5], (bbox[0],bbox[3]+80), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=2, color=name_color)
+                    name_color = [0,200,197]
+                if pred_score3 > 0:
+                    result_frame = cv2.putText(result_frame, str(pred_score3)[:5], (bbox[0],bbox[3]+120), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=2, color=name_color)
                     name_color = [0,200,197]
 
-                # 이름 배경
-                result_frame = cv2.rectangle(result_frame, (bbox[0], bbox[3]+10), (bbox[2], bbox[3]+38), (255,255,255), thickness=-1)
-                
                 # 이름
-                result_frame = cv2.putText(result_frame, pred_name, (bbox[0],bbox[3]+30), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=2, color=name_color)
+                result_frame = cv2.putText(result_frame, pred_name, (bbox[0],bbox[3]+20), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=2, color=name_color)
+                result_frame = cv2.putText(result_frame, pred_name2, (bbox[0],bbox[3]+60), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=2, color=name_color)
+                result_frame = cv2.putText(result_frame, pred_name3, (bbox[0],bbox[3]+100), cv2.FONT_HERSHEY_COMPLEX, fontScale=0.7, thickness=2, color=name_color)
 
         return result_frame
