@@ -1,29 +1,30 @@
-# ArcFace
+# LeNet_MNIST
 
 ![version](https://img.shields.io/badge/CUDA-11.1-brightgreen) ![version](https://img.shields.io/badge/cuDNN-8.1.0-blue) ![version](https://img.shields.io/badge/pytorch-1.9.0-orange)
 
 
 
 ## Main idea
-![1](https://user-images.githubusercontent.com/87002037/128664968-c7c7973d-af17-4c10-9daa-4e6b0f55a103.PNG)
+![1](https://user-images.githubusercontent.com/87002037/131639522-aebe7a34-b76a-4852-abc7-b3965aedee0d.PNG)
+
 
 
 
 ## Details
 
-* I implemented part 2.1 Figure 3(toy example) Experiments using MNIST dataset
+* I implemented part 3.1 Figure 3(toy example) Experiments using MNIST dataset
 
-* I didnt apply scale on arcface loss
+* I tried 0.1 learning late and 0.01 learning late
 
-* It was quite confusing "where do i have to put ArcFace loss function in network architecture?"
+* When i tried 0.1 learning late, After 15 epoch, i got nan loss
 
-* Most important thing is loss is calculated with logit's output and ground-truth label
+* When i tried 0.01 learning late, There was no problem at all until epoch 100 (if you want more, possible)
 
-* ArcFace is technicque for changing logit's input with margin
+* As we can check from image, 0.01 test's performance is better than 0.1 test
 
-* ArcFace loss just add margin to groud truth's weight. people called this as ArcFace loss, so i thought that might be standard for calculating for loss. but it wasnt. Still loss is calculated by Cross-Entropy loss function   
+* Suddenly i was curious about num_workers in Dataloader, i did test about this as well   
 
-![2](https://user-images.githubusercontent.com/87002037/128664977-b0b250c1-d23f-4e1d-841f-ec85869c5250.PNG)
+* i did 2, 4, 8 num_workers test, when num_workers is getting bigger, pigure looks like a more having intra compactness
 
 
 ## Performance
@@ -42,5 +43,7 @@
 
 ## Reference
 
-* ArcFace: Additive Angular Margin Loss for Deep Face Recognition (Jiankang Deng, Jia Guo, Niannan Xue, Stefanos Zafeiriou)
+* A Discriminative Feature Learning Approach for Deep Face Recognition (Yandong WenKaipeng ZhangZhifeng Li)
+ 
+ (ECCV 2016: Computer Vision – ECCV 2016 pp 499-515)
 
