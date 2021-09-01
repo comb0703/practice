@@ -13,7 +13,6 @@
 ## Details
 
 * I implemented part 3.1 Figure 3(toy example) Experiments using MNIST dataset
-![worker8 (5)](https://user-images.githubusercontent.com/87002037/131642371-a652a478-bb1c-4236-be2b-d4adcb96cebd.png)
 
 * I tried 0.1 learning late and 0.01 learning late
 
@@ -29,20 +28,18 @@
 
 
 ## Performance
-* num_workers
+* num_workers (2,4,8)
+![worker2 (5)](https://user-images.githubusercontent.com/87002037/131642754-ccd7ae5f-587b-421a-8774-f19c21637903.png)
+![worker4 (5)](https://user-images.githubusercontent.com/87002037/131642761-040ce488-4c55-49e1-9196-92c88345c22d.png)
+![worker8 (5)](https://user-images.githubusercontent.com/87002037/131642766-78b6d444-e1a4-4de9-8a63-16935a1a56a1.png)
 
-![worker2 (5)](https://user-images.githubusercontent.com/87002037/131642287-8c7707d6-1200-4c6c-8bbb-8494bc00d9b5.png)
-![worker4 (5)](https://user-images.githubusercontent.com/87002037/131642295-48505dd8-7233-47d3-9821-fd14a5cebc0f.png)
-![Uploading worker8 (5).png…]()
 
 
-* ArcFace
 
-![2](https://user-images.githubusercontent.com/87002037/128678762-48a60c7b-696d-440a-87fb-44664a327a56.PNG)
+* learning 0.1(15 epochs), 0.01(100 epochs)
 
-* 3D Visualization
-
-![4](https://user-images.githubusercontent.com/87002037/128678829-ce71e0ff-744d-4faf-b9da-be27c92c2d02.PNG)
+![learning_0 1 (15)](https://user-images.githubusercontent.com/87002037/131642846-371357b6-8145-400d-8706-364fc99054f7.png)
+![learning_0 01 (100)](https://user-images.githubusercontent.com/87002037/131642856-9ebbdb28-5a39-4d5e-9a06-94a99dbb97f2.png)
 
 
 ## Reference
