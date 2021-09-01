@@ -13,6 +13,7 @@
 ## Details
 
 * I implemented part 3.1 Figure 3(toy example) Experiments using MNIST dataset
+![worker8 (5)](https://user-images.githubusercontent.com/87002037/131642371-a652a478-bb1c-4236-be2b-d4adcb96cebd.png)
 
 * I tried 0.1 learning late and 0.01 learning late
 
@@ -28,9 +29,12 @@
 
 
 ## Performance
-* Softmax
+* num_workers
 
-![1](https://user-images.githubusercontent.com/87002037/128678740-424c2325-221b-4895-a8ed-258ed42d9231.PNG)
+![worker2 (5)](https://user-images.githubusercontent.com/87002037/131642287-8c7707d6-1200-4c6c-8bbb-8494bc00d9b5.png)
+![worker4 (5)](https://user-images.githubusercontent.com/87002037/131642295-48505dd8-7233-47d3-9821-fd14a5cebc0f.png)
+![Uploading worker8 (5).png…]()
+
 
 * ArcFace
 
