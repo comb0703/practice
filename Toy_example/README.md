@@ -29,8 +29,9 @@
 
 ## Performance
 * num_workers (2,4,8)
+
 ![worker2 (5)](https://user-images.githubusercontent.com/87002037/131642754-ccd7ae5f-587b-421a-8774-f19c21637903.png)
-![worker4 (5)](https://user-images.githubusercontent.com/87002037/131642761-040ce488-4c55-49e1-9196-92c88345c22d.png)
+![worker4 (5)](https://user-images.githubusercontent.com/87002037/131643126-7b8e7d32-92df-4ff3-b0cf-06e5dfc754da.png)
 ![worker8 (5)](https://user-images.githubusercontent.com/87002037/131642766-78b6d444-e1a4-4de9-8a63-16935a1a56a1.png)
 
 
