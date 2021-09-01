@@ -24,7 +24,7 @@
 
 * Suddenly i was curious about num_workers in Dataloader, i did test about this as well   
 
-* i did 2, 4, 8 num_workers test, when num_workers is getting bigger, pigure looks like a more having intra compactness
+* i did 2, 4, 8 num_workers test, when num_workers is getting bigger, i dont know why, pigure looks like a more having intra compactness (it should be same)
 
 
 ## Performance
