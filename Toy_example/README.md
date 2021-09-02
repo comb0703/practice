@@ -1,46 +1,53 @@
-# ArcFace
+# LeNet_MNIST
 
 ![version](https://img.shields.io/badge/CUDA-11.1-brightgreen) ![version](https://img.shields.io/badge/cuDNN-8.1.0-blue) ![version](https://img.shields.io/badge/pytorch-1.9.0-orange)
 
 
 
 ## Main idea
-![1](https://user-images.githubusercontent.com/87002037/128664968-c7c7973d-af17-4c10-9daa-4e6b0f55a103.PNG)
+![1](https://user-images.githubusercontent.com/87002037/131639522-aebe7a34-b76a-4852-abc7-b3965aedee0d.PNG)
+
 
 
 
 ## Details
 
-* I implemented part 2.1 Figure 3(toy example) Experiments using MNIST dataset
+* I implemented part 3.1 Figure 3(toy example) Experiments using MNIST dataset
 
-* I didnt apply scale on arcface loss
+* I tried 0.1 learning late and 0.01 learning late
 
-* It was quite confusing "where do i have to put ArcFace loss function in network architecture?"
+* When i tried 0.1 learning late, After 15 epoch, i got nan loss
 
-* Most important thing is loss is calculated with logit's output and ground-truth label
+* When i tried 0.01 learning late, There was no problem at all until epoch 100 (if you want more, possible)
 
-* ArcFace is technicque for changing logit's input with margin
+* As we can check from image, 0.01 test's performance is better than 0.1 test
 
-* ArcFace loss just add margin to groud truth's weight. people called this as ArcFace loss, so i thought that might be standard for calculating for loss. but it wasnt. Still loss is calculated by Cross-Entropy loss function   
+* Suddenly i was curious about num_workers in Dataloader, i did test about this as well   
 
-![2](https://user-images.githubusercontent.com/87002037/128664977-b0b250c1-d23f-4e1d-841f-ec85869c5250.PNG)
+* i did 2, 4, 8 num_workers test, when num_workers is getting bigger, i dont know why, pigure looks like a more having intra compactness (it should be same)
 
 
 ## Performance
-* Softmax
+* num_workers (2,4,8)
 
-![1](https://user-images.githubusercontent.com/87002037/128678740-424c2325-221b-4895-a8ed-258ed42d9231.PNG)
+![worker2 (5)](https://user-images.githubusercontent.com/87002037/131642754-ccd7ae5f-587b-421a-8774-f19c21637903.png)
 
-* ArcFace
+  ![worker4 (5)](https://user-images.githubusercontent.com/87002037/131643126-7b8e7d32-92df-4ff3-b0cf-06e5dfc754da.png)
 
-![2](https://user-images.githubusercontent.com/87002037/128678762-48a60c7b-696d-440a-87fb-44664a327a56.PNG)
+![worker8 (5)](https://user-images.githubusercontent.com/87002037/131642766-78b6d444-e1a4-4de9-8a63-16935a1a56a1.png)
 
-* 3D Visualization
 
-![4](https://user-images.githubusercontent.com/87002037/128678829-ce71e0ff-744d-4faf-b9da-be27c92c2d02.PNG)
+
+
+* learning 0.1(15 epochs), 0.01(100 epochs)
+
+![learning_0 1 (15)](https://user-images.githubusercontent.com/87002037/131642846-371357b6-8145-400d-8706-364fc99054f7.png)
+![learning_0 01 (100)](https://user-images.githubusercontent.com/87002037/131642856-9ebbdb28-5a39-4d5e-9a06-94a99dbb97f2.png)
 
 
 ## Reference
 
-* ArcFace: Additive Angular Margin Loss for Deep Face Recognition (Jiankang Deng, Jia Guo, Niannan Xue, Stefanos Zafeiriou)
+* A Discriminative Feature Learning Approach for Deep Face Recognition (Yandong WenKaipeng ZhangZhifeng Li)
+ 
+ (ECCV 2016: Computer Vision – ECCV 2016 pp 499-515)
 
