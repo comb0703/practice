@@ -28,22 +28,29 @@
 
 
 ## Performance
-* num_workers (2,4,8)
+* num_workers 2
 
-![worker2 (5)](https://user-images.githubusercontent.com/87002037/131642754-ccd7ae5f-587b-421a-8774-f19c21637903.png)
+![worker2](https://user-images.githubusercontent.com/87002037/131765401-e2f8198d-ec96-4862-a1e7-e91bd9dc2385.gif)
 
-  ![worker4 (5)](https://user-images.githubusercontent.com/87002037/131643126-7b8e7d32-92df-4ff3-b0cf-06e5dfc754da.png)
+* num_workers 4
 
-![worker8 (5)](https://user-images.githubusercontent.com/87002037/131642766-78b6d444-e1a4-4de9-8a63-16935a1a56a1.png)
+![worker4](https://user-images.githubusercontent.com/87002037/131765404-ac946c8f-c4a7-4b43-bf04-335424420a32.gif)
+
+* num_workers 8
+
+![worker8](https://user-images.githubusercontent.com/87002037/131765408-c8703e04-5027-4e03-b270-6e29137f8ec7.gif)
 
 
 
 
-* learning 0.1(15 epochs), 0.01(100 epochs)
 
-![learning_0 1 (15)](https://user-images.githubusercontent.com/87002037/131642846-371357b6-8145-400d-8706-364fc99054f7.png)
-![learning_0 01 (100)](https://user-images.githubusercontent.com/87002037/131642856-9ebbdb28-5a39-4d5e-9a06-94a99dbb97f2.png)
+* learning 0.1(15 epochs)
 
+![learning 0 1](https://user-images.githubusercontent.com/87002037/131765362-d3fd1168-625c-497b-ac0c-7b9031f85a6b.gif)
+
+* learning 0.01(100 epochs)
+
+![learning_0 01](https://user-images.githubusercontent.com/87002037/131765373-1c1574e8-f874-4e69-9f22-667f658a542c.gif)
 
 ## Reference
 
