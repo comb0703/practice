@@ -1,48 +1,42 @@
-# LeNet_MNIST
+# Center_loss
 
 ![version](https://img.shields.io/badge/CUDA-11.1-brightgreen) ![version](https://img.shields.io/badge/cuDNN-8.1.0-blue) ![version](https://img.shields.io/badge/pytorch-1.9.0-orange)
 
 
 
 ## Main idea
-![1](https://user-images.githubusercontent.com/87002037/131639522-aebe7a34-b76a-4852-abc7-b3965aedee0d.PNG)
+![ce](https://user-images.githubusercontent.com/87002037/133391304-368da59b-35f4-495b-9d6a-ec7ec00f9039.PNG)
 
 
 
 
 ## Details
 
-* I implemented part 3.1 Figure 3(toy example) Experiments using MNIST dataset
+* I implemented part 3.2 Figure 3 Experiments using MNIST dataset
 
-* I tried 0.1 learning late and 0.01 learning late
+* I set 0.1 learning late and 0.1 lamda
 
-* When i tried 0.1 learning late, After 15 epoch, i got nan loss
+* Network architecture is ResNet38
 
-* When i tried 0.01 learning late, There was no problem at all until epoch 100 (if you want more, possible)
+* When epoch over 50,100, learning rate was divided 10
 
-* As we can check from image, 0.01 test's performance is better than 0.1 test
-
-* Suddenly i was curious about num_workers in Dataloader, i did test about this as well   
-
-* i did 2, 4, 8 num_workers test, when num_workers is getting bigger, i dont know why, pigure looks like a more having intra compactness (it should be same)
+* Total training epoch 120
 
 
 ## Performance
-* num_workers (2,4,8)
+* softmax
 
-![worker2 (5)](https://user-images.githubusercontent.com/87002037/131642754-ccd7ae5f-587b-421a-8774-f19c21637903.png)
 
-  ![worker4 (5)](https://user-images.githubusercontent.com/87002037/131643126-7b8e7d32-92df-4ff3-b0cf-06e5dfc754da.png)
-
-![worker8 (5)](https://user-images.githubusercontent.com/87002037/131642766-78b6d444-e1a4-4de9-8a63-16935a1a56a1.png)
+![softmax](https://user-images.githubusercontent.com/87002037/133391872-19eedb2a-926c-4fa4-b13a-1687a09985cb.gif)
 
 
 
 
-* learning 0.1(15 epochs), 0.01(100 epochs)
+* center_loss
 
-![learning_0 1 (15)](https://user-images.githubusercontent.com/87002037/131642846-371357b6-8145-400d-8706-364fc99054f7.png)
-![learning_0 01 (100)](https://user-images.githubusercontent.com/87002037/131642856-9ebbdb28-5a39-4d5e-9a06-94a99dbb97f2.png)
+![center_loss](https://user-images.githubusercontent.com/87002037/133392030-78766a3b-13ee-4454-828e-310c27a582ae.gif)
+
+
 
 
 ## Reference
