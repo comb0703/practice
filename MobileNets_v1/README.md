@@ -15,7 +15,7 @@
 
 * I implemented comparative experiment btween CNN and MobileNet using CIFAR 10 dataset
 
-* I did only 20 epoch, there was no meaningful performance gap
+* I did only 10 epoch, there was no meaningful performance gap
 
 
 
