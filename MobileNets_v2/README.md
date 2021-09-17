@@ -5,9 +5,10 @@
 
 
 ## Main idea
-![1](https://user-images.githubusercontent.com/87002037/133559186-59d92de3-44a7-443a-ba32-1809079ec0d4.PNG)
-![2](https://user-images.githubusercontent.com/87002037/133559192-a59c3dd8-1cf0-4813-940c-1fc9f4cebd92.PNG)
 
+![21](https://user-images.githubusercontent.com/87002037/133729667-27f43661-38e6-4c16-9965-3203f2fad89d.PNG)
+![31](https://user-images.githubusercontent.com/87002037/133729673-febc9c7e-60df-42bb-bf99-40581228b71b.PNG)
+![3](https://user-images.githubusercontent.com/87002037/133729767-0832d66b-9fb0-4988-93ff-52f592283a9a.PNG)
 
 
 
