@@ -13,7 +13,7 @@
 
 ## Details
 
-* I implemented exactly same architecture with Table 2
+* I implemented exactly same architecture with Table 2 using cifar 10 dataset
 
 * I did only 60 epoch, learning rate was 0.1
 
