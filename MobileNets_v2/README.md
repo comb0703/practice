@@ -1,4 +1,4 @@
-# MobileNets_v1
+# MobileNets_v2
 
 ![version](https://img.shields.io/badge/CUDA-11.1-brightgreen) ![version](https://img.shields.io/badge/cuDNN-8.1.0-blue) ![version](https://img.shields.io/badge/pytorch-1.9.0-orange)
 
@@ -14,26 +14,28 @@
 
 ## Details
 
-* I implemented comparative experiment btween CNN and MobileNet using CIFAR 10 dataset
+* I implemented exactly same architecture with Table 2
 
-* I did only 10 epoch, there was no meaningful performance gap
+* I did only 60 epoch, learning rate was 0.1
 
+* There are total 2.38305 M params
+
+* Total training time is 20,000 sec
 
 
 ## Performance
-* CNN
 
-![CNN](https://user-images.githubusercontent.com/87002037/133559494-ded9e743-de99-45be-8609-e0478f61d27e.PNG)
+![1](https://user-images.githubusercontent.com/87002037/133730210-911a14af-e529-4fb8-8c1f-1cb57fdd38dd.PNG)
+![2](https://user-images.githubusercontent.com/87002037/133730249-e9776b95-5eef-401b-a66c-ce560e6db9c9.png)
+![3](https://user-images.githubusercontent.com/87002037/133730252-2c6c1892-1ddd-4f0f-be09-ef298bead455.PNG)
 
-* MobileNets_v1
 
-![Depthwise](https://user-images.githubusercontent.com/87002037/133559500-43066cd4-6bb9-47ca-9a9a-697b470de699.PNG)
 
 
 
 ## Reference
 
-* MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications (Andrew G. Howard)
-  2017
+* MobileNetV2: Inverted Residuals and Linear Bottlenecks (Mark Sandler)
+  2019
 
 
