@@ -3,6 +3,10 @@ implementation of paper - [You Only Learn One Representation: Unified Network fo
 
 using NIA dataset for small object detection
 
+
+![exp](https://user-images.githubusercontent.com/87002037/141260363-395246ab-b9c9-4e57-bbcf-e6c3d16dd3bd.png)
+
+
 To fit your datset, 
 
 nc, names in /data/coco.yaml
