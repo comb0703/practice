@@ -1,6 +1,7 @@
 # YOLOv4-NIA dataset
 
-This is the implementation of "[Scaled-YOLOv4: Scaling Cross Stage Partial Network](https://arxiv.org/abs/2011.08036)" using PyTorch framwork.
+This is the implementation of "[Scaled-YOLOv4: Scaling Cross Stage Partial Network](https://arxiv.org/abs/2011.08036)"using PyTorch framwork.
+
 using NIA dataset for small object detection
 
 To fit your datset, /data/coco.yaml and /models/yolov4-p5.yaml files have to be changed with your classes number
