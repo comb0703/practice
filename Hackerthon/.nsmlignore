@@ -1,0 +1,10 @@
+.gitignore
+*.pickle
+*.npy
+*.json
+*.pt
+.git/
+git/
+.gitignore
+__pycache__/
+*/__pycache__/
